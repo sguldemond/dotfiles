@@ -6,4 +6,5 @@
 
 # Also not these
 !.zshrc
-
+!.vimrc
+!.nanorc
