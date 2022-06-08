@@ -8,3 +8,7 @@
 !.zshrc
 !.vimrc
 !.nanorc
+
+# pgAdmin
+!.pgadmin
+!.pgadmin/config_local.py
