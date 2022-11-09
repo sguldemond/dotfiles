@@ -143,4 +143,4 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 # Launch pgAdmin4
-alias pgadmin4='/home/west/venvs/pgadmin4/bin/pgadmin4'
+alias pgadmin4='/home/west/venvs/pgadmin4/bin/pgadmin4 & google-chrome --new-window http://localhost:5050 && fg'
