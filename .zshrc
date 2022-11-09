@@ -102,15 +102,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias zshconfig="nano ~/.zshrc"
-alias python="python3"
 
-# Use single quotes to call create a loose variable
-alias curdir='echo ${PWD##*/}'
-alias sourcevenv='source ~/venvs/$(curdir)/bin/activate'
-alias createvenv='python3 -m venv ~/venvs/$(curdir) && sourcevenv'
-
-# External applications
+### External applications
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -142,5 +135,15 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# Launch pgAdmin4
+### Custom aliases
+alias zshconfig="nano ~/.zshrc"
+alias python="python3"
+
+# Create & source Python venv
+# Use single quotes to call create a loose variable
+alias curdir='echo ${PWD##*/}'
+alias createvenv='python3 -m venv ~/venvs/$(curdir) && sourcevenv'
+alias sourcevenv='source ~/venvs/$(curdir)/bin/activate'
+
+# Launch pgAdmin4 + Chrome
 alias pgadmin4='/home/west/venvs/pgadmin4/bin/pgadmin4 & google-chrome --new-window http://localhost:5050 && fg'
