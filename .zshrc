@@ -87,7 +87,8 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nano'
 else
   # local
-  export EDITOR='micro'
+  #export EDITOR='micro'
+  export EDITOR='nano'
 fi
 
 # Compilation flags
