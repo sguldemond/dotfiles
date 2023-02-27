@@ -111,7 +111,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # for running bon installed by: pip
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/software/elixir-otp-24/bin:$HOME/.local/bin:$PATH"
 
 ### Custom aliases
 alias zshconfig="nano ~/.zshrc"
