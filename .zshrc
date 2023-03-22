@@ -125,3 +125,4 @@ alias sourcevenv='source ~/venvs/$(curdir)/bin/activate'
 
 # Launch pgAdmin4 + Chrome
 alias pgadmin4='/home/stan/venvs/pgadmin4/bin/pgadmin4 & google-chrome --new-window http://localhost:5050 && fg'
+alias upgradepg='/home/stan/venvs/pgadmin4/bin/pip install --upgrade pgadmin4 > /dev/null'
