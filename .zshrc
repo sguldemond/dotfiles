@@ -130,10 +130,4 @@ alias sourcevenv='source ~/venvs/$(curdir)/bin/activate'
 
 # Launch pgAdmin4 + Chrome
 alias pgadmin4='/home/stan/venvs/pgadmin4/bin/pgadmin4 & google-chrome --new-window http://localhost:5050 && fg'
-
-# bun completions
-[ -s "/home/stan/.reflex/.bun/_bun" ] && source "/home/stan/.reflex/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.reflex/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+alias upgradepg='/home/stan/venvs/pgadmin4/bin/pip install --upgrade pgadmin4 > /dev/null'
