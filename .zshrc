@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="awesomepanda"
+ZSH_THEME="candy"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,6 +106,8 @@ fi
 
 ### Custom
 
+export ADAM_DIR="$HOME/Development/Amsterdam"
+
 # Setup NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -115,8 +117,10 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH:$HOME/.local/bin:/usr/software/elixir-otp-24/bin"
 
 ### Custom aliases
+
 alias zshconfig="nano ~/.zshrc"
 alias python="python3"
+alias adam="cd $ADAM_DIR"
 
 # Create & source Python venv
 # Use single quotes to call create a loose variable
@@ -126,3 +130,10 @@ alias sourcevenv='source ~/venvs/$(curdir)/bin/activate'
 
 # Launch pgAdmin4 + Chrome
 alias pgadmin4='/home/stan/venvs/pgadmin4/bin/pgadmin4 & google-chrome --new-window http://localhost:5050 && fg'
+
+# bun completions
+[ -s "/home/stan/.reflex/.bun/_bun" ] && source "/home/stan/.reflex/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.reflex/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
