@@ -8,6 +8,7 @@
 !.zshrc
 !.vimrc
 !.nanorc
+!.tmux.conf
 
 # pgAdmin
 !.pgadmin
