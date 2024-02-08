@@ -1,4 +1,4 @@
-# dot-shell
+# dotfiles
 
 Install ZSH
 ```
