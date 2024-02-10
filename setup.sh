@@ -8,7 +8,7 @@ for file in "$special_folder"/.*; do
     # Extract filename without leading path
     filename=$(basename "$file")
     # Check if the file is a regular file (not . or ..) and starts with a dot
-    if [[ -f "$file" && "$filename" != "." && "$filename" != ".." && "$filename" == .* ]]; then
+    if [[ -f "$file" && "$filename" != "." && "$filename" != ".." && "$filename" != ".git" && "$filename" != ".gitignore" && "$filename" == .* ]]; then
         # Check if the file already exists in the home folder
         if [ -e "$HOME/$filename" ]; then
             # Ask the user if they want to replace the existing file
