@@ -106,7 +106,17 @@ fi
 
 ### Custom
 
-export ADAM_DIR="$HOME/Development/Amsterdam"
+case $(hostname) in
+  "tp1")
+    export ADAM_DIR="$HOME/Development/Amsterdam"
+    ;;
+  "stan-dell-3590")
+    export ADAM_DIR="$HOME/Projects/Amsterdam"
+    ;;
+  *)
+    export ADAM_DIR="$HOME"  # Default directory if machine name doesn't match
+    ;;
+esac
 
 # Setup NVM
 export NVM_DIR="$HOME/.nvm"
