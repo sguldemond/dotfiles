@@ -129,8 +129,14 @@ export PATH="$PATH:$HOME/.local/bin:/usr/software/elixir-otp-24/bin"
 ### Custom aliases
 
 alias zshconfig="nano ~/.zshrc"
-alias python="python3"
 alias adam="cd $ADAM_DIR"
+
+# Fixes Cursor IDE issues with Python interpreter: https://github.com/getcursor/cursor/issues/1484
+alias python="/usr/bin/env python"
+# Open file or folder in Cursor, just like using `code .`
+function cursor {
+        $HOME/Applications/cursor-0.42.4-build-2410291z3bdg1dy-x86_64_4eb43e03d46b1e823cdd3f6697f8ffe8.AppImage $@
+}
 
 # Create & source Python venv
 # Use single quotes to call create a loose variable
