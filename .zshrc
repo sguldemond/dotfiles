@@ -135,7 +135,12 @@ alias adam="cd $ADAM_DIR"
 alias python="/usr/bin/env python"
 # Open file or folder in Cursor, just like using `code .`
 function cursor {
-        $HOME/Applications/cursor-0.42.4-build-2410291z3bdg1dy-x86_64_4eb43e03d46b1e823cdd3f6697f8ffe8.AppImage $@
+  appimage_path=$(find "$HOME/Applications" -name "cursor-*.AppImage" | sort | tail -n 1)
+  if [[ -x "$appimage_path" ]]; then
+    "$appimage_path" --no-sandbox "$@"
+  else
+    echo "Cursor AppImage not found in $HOME/Applications"
+  fi
 }
 
 # Create & source Python venv
